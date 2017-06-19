@@ -1,0 +1,91 @@
+@mixin desktop {
+  @media (min-width: 599px) { @content; }
+}
+
+// @mixin tablet {
+//   @media (min-width: 900px) { @content; }
+// }
+
+@mixin navbar {
+  height: 47px;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+@mixin logo {
+  height: 27px;
+  width: 104px;
+  margin-left: 46px;
+  margin-bottom: 12px;
+  padding-top: 8px;
+  @include desktop {margin-left: 146px;}
+}
+
+@mixin rectangle {
+  width: 165px;
+  height: 165px;
+  background-color: #D8D8D8;
+}
+
+@mixin header {
+  font-size: 24px;
+  font-weight: bold;
+  color: $textColor;
+}
+
+@mixin selectField {
+  width: 117px;
+  height: 30px;
+  margin-left: 20px;
+  @include desktop { width: 167px; }
+}
+
+@mixin buttonShape {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: $textColor;
+}
+
+@mixin buttonCopy {
+  height: 30px;
+  width: 120px;
+  background-color: $green;
+  box-shadow: 0 1px 2px 0 #335801;
+  font-size: 12px;
+  color: #FDFDFD;
+  opacity: 0.9;
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@mixin buttonRemember {
+  width: 82px;
+  height: 30px;
+  margin-right: 17px;
+  color: $textColor;
+  font-size: 10px;
+  background-color: #DDDDDD;
+  &:hover {
+    background-color: #D8D8D8;
+  }
+  i {
+    height:12px;
+    width:11px;
+    margin-right: 6px;
+    color: #898989;
+  }
+}
+
+@mixin buttonNavigation {
+  height: 40px;
+  font-size: 16px;
+  padding-left: 15px;
+  text-align: left;
+  background-color: #D6D6D6;
+  &:focus {
+    background-color: $green;
+    color: #fff;
+  }
+}
